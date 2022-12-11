@@ -5,7 +5,7 @@ namespace NoteBook.Controlers
 {
     internal static class CryptControler
     {
-        static string GetSHA256(string data)
+        public static string GetSHA256(string data)
         {
             SHA256Managed crypt = new SHA256Managed();
             byte[] bytes = Encoding.UTF8.GetBytes(data);
