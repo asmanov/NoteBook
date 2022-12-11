@@ -25,7 +25,11 @@ namespace NoteBook.Controlers
         {
            if( _users.Any(x => x.Key == user.Login))
             {
-
+                string item = _users.First(x => x.Key == user.Login).Value;
+               if ( item == CryptControler.GetSHA256(user.Password))
+                {
+                    //что делать после совпадения пароля???
+                }
             }
         }
 
