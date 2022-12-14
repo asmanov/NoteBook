@@ -13,6 +13,7 @@ while(!enter)
     string password = Console.ReadLine();
     user.Login = login;
     user.Password = password;
+    user.Path = $"{login}.json";
     if (login != null && password != null)
     {
         using (UsersControler users = UsersControler.Instance)
