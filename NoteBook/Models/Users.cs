@@ -8,7 +8,7 @@ namespace NoteBook.Models
         public string Password { get; set; }
         public string Path { get; set; }
 
-        public Users(string login, string password)
+        public Users(string login = "", string password = "")
         {
             Login = login;
             Password = CryptControler.GetSHA256(password);

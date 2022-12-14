@@ -40,7 +40,7 @@ namespace NoteBook.Models
             notes.Add(note);
         }
         //удаление записи
-        public string DelNote(string str)
+        public string DelNote(string str) 
         {
             Note note = (FindNote(str))[0];
             if (notes.Remove(note)) return "The note was deleted";
