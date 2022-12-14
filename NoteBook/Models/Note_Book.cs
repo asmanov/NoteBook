@@ -31,6 +31,16 @@ namespace NoteBook.Models
             }
         }
         //добавление записи
+        /// <summary>
+        /// This method add note to notebook
+        /// 
+        /// </summary>
+        /// <param name="title"></param>
+        /// Note's title
+        /// A <see cref="string"/>
+        /// type representing a value.
+        /// <param name="body"></param>
+        /// <param name="priority"></param>
         public void AddNote(string title = "None" , string body = "", bool priority = false)
         {
             Note note = new Note();
@@ -42,15 +52,15 @@ namespace NoteBook.Models
         //удаление записи
         public string DelNote(string str) 
         {
-            Note note = (FindNote(str))[0];
+            Note note = FindNote(str);
             if (notes.Remove(note)) return "The note was deleted";
             else return "The note don`t find";
         }
         //нахождение записи по заголовку
-        public List<Note >FindNote(string title)
+        public Note FindNote(string title)
         {
             //return (Note)(from x in notes where x.Title == title select x );
-            var nt = notes.Where(x => x.Title == title).ToList();
+            Note nt = notes.FirstOrDefault(x => x.Title == title);
             return nt;
         }
         //редактирование заголовка

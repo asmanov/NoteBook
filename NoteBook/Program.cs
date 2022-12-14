@@ -26,7 +26,18 @@ while(!enter)
 
 using (Note_Book mynotebook = new Note_Book(user.Path))
 {
-
+    string ch = "";
+    while(ch!="4")
+    {
+        Console.WriteLine("Enter action:\n" +
+        "Add note - 1\n" +
+        "Delete note -2\n" +
+        "Find note 3\n" +
+        "Exit - 4\n");
+        ch = Console.ReadLine();
+        NoteControler.Note(ch, mynotebook);
+        Console.Clear();
+    }
 }
 
 
