@@ -1,6 +1,6 @@
 ﻿namespace NoteBook.Models
 {
-    internal class Note
+    public class Note
     {
         public string Title { get; set; } = "Title";
         public string Body { get; set; } = string.Empty;

@@ -15,7 +15,7 @@
 
 namespace NoteBook.Models
 {
-    internal class Note_Book : IDisposable
+    public class Note_Book : IDisposable
     {
         public string Path { get; set; }
         public List<Note> notes;
@@ -53,7 +53,7 @@ namespace NoteBook.Models
         public string DelNote(string str) 
         {
             Note note = FindNote(str);
-            if (notes.Remove(note)) return "The note was deleted";
+            if (notes.Remove(note)) return "The note was delete";
             else return "The note don`t find";
         }
         //нахождение записи по заголовку
